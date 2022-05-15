@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Quickview.scss"
+import "./QuickView.scss"
 import CancelIcon from '@mui/icons-material/Cancel';
 
 export default function Quickview({bannerStyle, movie, popup, popupStatut}) {
@@ -15,7 +15,8 @@ export default function Quickview({bannerStyle, movie, popup, popupStatut}) {
                 </p>
             </div>
             <button className='quickView__close' onClick={popup}>
-                <CancelIcon fontSize="large"/>
+                <CancelIcon />
+                {/* <CancelIcon fontSize="large"/> */}
             </button>
         </div>
     </div>

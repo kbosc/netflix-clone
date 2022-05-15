@@ -4,7 +4,8 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import requests from "../config/Request"
 import axios from 'axios';
-import Quickview from './Quickview';
+import Quickview from './QuickView';
+import { Link } from "react-router-dom"
 
 export default function Banner() {
     const [movie, setMovie] = useState([])
@@ -49,10 +50,12 @@ export default function Banner() {
                 {/* {movie.overview ? truncateText(movie.overview, 100) : "Nous sommes désolé mais il n'y a pas de description"} */}
             </p>
             <div className='banner__buttons'>
-                <button className='banner__button banner__button--play'>
-                    <PlayArrowIcon />
-                    Lecture
-                </button>
+                <Link to={`/video/${movie?.id}`}>
+                    <button className='banner__button banner__button--play'>
+                        <PlayArrowIcon />
+                        Lecture
+                    </button>
+                </Link>
                 <button className='banner__button' onClick={handleClickPopup}>
                     <HelpOutlineIcon />
                     Plus d'infos

@@ -1,7 +1,7 @@
 import React, { useState, useEffect }  from "react"
 import axios from "axios"
 import "./Row.scss"
-// import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function Row({ title, fetchUrl, isPoster }) {
   const baseUrl = "https://image.tmdb.org/t/p/original"
@@ -23,13 +23,13 @@ export default function Row({ title, fetchUrl, isPoster }) {
       <div className="row__images">
         {movies.map(movie => (
           <div key={movie.id}>
-            {/* <Link to={`/video/${movie.id}`}> */}
+            <Link to={`/video/${movie.id}`}>
             <img
                 src={isPoster ? `${baseUrl}/${movie.poster_path}`: `${baseUrl}/${movie.backdrop_path}`}
                 alt={movie?.title || movie?.name || movie?.original_title}
                 className="row__image"
             />
-            {/* </Link> */}
+            </Link>
           </div>
         ))}
       </div>
