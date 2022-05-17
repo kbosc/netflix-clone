@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 export default function Nav() {
@@ -31,18 +31,18 @@ export default function Nav() {
             </button>
             <img src='./images/netflix-logo-v2.png' className='nav__logo' alt='logo de netflix'/>
             <nav className='nav__links'>
-                <a href='/' className='nav__link'>
+                <NavLink to="/" className={(nav) => (nav.isActive ? "nav--active nav__link" : "nav__link")}>
                     Accueil
-                </a>
-                <a href='/' className='nav__link'>
+                </NavLink>
+                {/* <a href='/' className='nav__link'>
                     Séries
                 </a>
                 <a href='/' className='nav__link'>
                     Films
-                </a>
-                <Link to="/user" className='nav__link'>
+                </a> */}
+                <NavLink to="/user" className={(nav) => (nav.isActive ? "nav--active nav__link" : "nav__link")}>
                     Ma liste
-                </Link>
+                </NavLink>
             </nav>
             <div className='nav__actions'>
                 <a href='/' className='nav__action'>

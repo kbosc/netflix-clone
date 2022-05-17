@@ -2,7 +2,7 @@
 
     Projet perso | Clone d'une Plateforme de streaming
 
-![alt text](https://github.com/kbosc/portfolio_v2/blob/main/public/IMAGES/LANDING.png?raw=true)
+![alt text](https://github.com/kbosc/netflix-clone/blob/main/public/images/landing.png?raw=true)
 
 > PROBLEMATIQUE
 
