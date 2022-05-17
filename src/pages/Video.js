@@ -1,6 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router'
-import "./Video.scss"
+// import { useParams } from 'react-router'
 
 export default function Video() {
     // let { id } = "https://www.youtube.com/watch?v=2z1T7V7-tqs&list=RD2z1T7V7-tqs&start_radio=1";

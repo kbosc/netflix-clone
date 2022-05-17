@@ -2,10 +2,13 @@ import React from 'react'
 import Banner from '../components/Banner'
 import Row from '../components/Row'
 import requests from '../config/Request'
+import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
     <div>
+        <Nav/>
         <Banner/>
         <Row 
         title="Programmes originaux Netflix" 
@@ -37,6 +40,7 @@ export default function Home() {
         fetchUrl={requests.fetchDocumentaries}
         />
       {/* <div className='test'></div> */}
+      <Footer/>
     </div>
   )
 }

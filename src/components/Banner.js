@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import "./Banner.scss"
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import requests from "../config/Request"
