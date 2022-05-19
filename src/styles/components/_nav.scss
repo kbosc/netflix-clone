@@ -71,6 +71,14 @@
             @media screen and (min-width: 768px) {
                 margin-left: 20px;
             }
+            &--form {
+                &__input {
+                    background-color: #111;
+                    border: 1px solid white;
+                    padding: 0.5rem;
+                    color: white;
+                }
+            }
         }
     }
     &__avatar {

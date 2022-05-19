@@ -12,8 +12,8 @@ Reproduction de l'interface et de ses fonctionnalités
 
 - [x] Reproduction d'une application et de ses fonctionnalités
 - [x] Utilisation d'une base de données sur serveur distant
-<!-- - [x] Sécurisation de la clé d'authentification à l'API -->
 - [x] Optimisation des performances de chargement et de rendu
+<!-- - [x] Sécurisation de la clé d'authentification à l'API -->
 
 ## Bibliothèque
 

@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useParams } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Link, NavLink } from 'react-router-dom';
+import FormSearch from './FormSearch';
+import SearchIcon from '@mui/icons-material/Search';
 
 
 export default function Nav() {
     const [navBlack, setNavBlack] = useState(false)
     const [toggleMenuBurger, setToggleMenuBurger] = useState(false)
 
-    console.log(window.location.pathname === "/user"); 
+    // console.log(window.location.pathname === "/user"); 
 
     const transitionNav = () => {
         window.scrollY > 100 ? setNavBlack(true) : setNavBlack(false)
@@ -45,9 +46,16 @@ export default function Nav() {
                 </NavLink>
             </nav>
             <div className='nav__actions'>
-                <a href='/' className='nav__action'>
-                    <SearchIcon />
-                </a>
+                {/* <FormSearch /> */}
+                <Link to="/search">
+                    {window.location.pathname === "/search" ? 
+                        <form className='nav__action--form'>
+                            <input type="text" placeholder='Titres, personnes, genres' id='search-input' className='nav__action--form__input'/> 
+                        </form>
+                        :
+                        <SearchIcon /> 
+                    }
+                </Link>
                 <a href='/' className='nav__action'>
                     DIRECT
                 </a>
