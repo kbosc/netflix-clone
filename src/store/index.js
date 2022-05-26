@@ -1,21 +1,26 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit'
 
-const dataTMDB = createSlice({
-    name: "dataTMDB",
+const dataSearchTMDB = createSlice({
+    name: "dataSearchTMDB",
     initialState: {
-        dataSearch: {},
+        favorite: [],
     },
     reducers: {
-        logDataSearch: (state, action) => {
-            state.data = {}
+        addFavoriteSearch: (state, action) => {
+            console.log(action);
+            !state.favorite.includes(action.payload) && state.favorite.push(action.payload);
+        },
+        RemoveFavoriteSearch: (state, action) => {
+            console.log(action);
+            console.log(state);
         },
     },
 })
 
-export const { logDataSearch } = dataTMDB.actions
+export const { addFavoriteSearch } = dataSearchTMDB.actions
 
 export const store = configureStore({
     reducer: {
-        dataTMDB: dataTMDB.reducer
+        dataSearchTMDB: dataSearchTMDB.reducer
     },
 })

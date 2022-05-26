@@ -1,0 +1,23 @@
+.card {
+    // &__container {
+        position: relative;
+        &__image {
+                width: 300px;
+                transition: transform 0.3s ease-in;
+                // object-fit: cover;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+        }
+        &__add {
+            position: absolute;
+            bottom: 2%;
+            right: 2%;
+            cursor: pointer;
+            &:active {
+                color: red;
+            }
+        }
+    // }
+}

@@ -1,10 +1,9 @@
 import React from 'react'
-import Nav from '../components/Nav'
 
 export default function UserPage() {
   return (
-    <div>
-        <Nav />
+    <div className='user'>
+      <h2>Ceci est la page des users en construct</h2>
     </div>
   )
 }

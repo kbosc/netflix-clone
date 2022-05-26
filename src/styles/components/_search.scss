@@ -1,4 +1,26 @@
 .search {
     padding: 10rem 4%;
     color: white;
+    &__text {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin: 2rem 0;
+        &--form {
+            &__input {
+                background-color: #111;
+                border: 1px solid white;
+                padding: 0.5rem;
+                color: white;
+            }
+        }
+
+    }
+    &__card {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
 }

@@ -2,7 +2,6 @@ import React, { useState, useParams } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Link, NavLink } from 'react-router-dom';
-import FormSearch from './FormSearch';
 import SearchIcon from '@mui/icons-material/Search';
 
 
@@ -46,15 +45,16 @@ export default function Nav() {
                 </NavLink>
             </nav>
             <div className='nav__actions'>
-                {/* <FormSearch /> */}
                 <Link to="/search">
-                    {window.location.pathname === "/search" ? 
-                        <form className='nav__action--form'>
-                            <input type="text" placeholder='Titres, personnes, genres' id='search-input' className='nav__action--form__input'/> 
-                        </form>
+                    {/* {window.location.pathname === "/search" ? 
+                        // <form className='nav__action--form'>
+                        //     <input type="text" placeholder='Titres, personnes, genres' id='search-input' className='nav__action--form__input'/> 
+                        // </form>
+                        ""
                         :
                         <SearchIcon /> 
-                    }
+                    } */}
+                    <SearchIcon /> 
                 </Link>
                 <a href='/' className='nav__action'>
                     DIRECT
