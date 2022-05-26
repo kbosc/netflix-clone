@@ -5,7 +5,7 @@ import requests from '../config/Request'
 
 export default function Home() {
   return (
-    <div>
+    <>
         <Banner/>
         <Row 
           title="Programmes originaux Netflix" 
@@ -36,6 +36,6 @@ export default function Home() {
           title="Documentaires" 
           fetchUrl={requests.fetchDocumentaries}
         />
-    </div>
+    </>
   )
 }

@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
 import CardSearch from '../components/CardSearch';
+import { API_KEY } from "../config/Request"
 
 export default function Search() {
     const [moviesData, setMoviesData] = useState([]);
     const [search, setSearch] = useState("super");
-    // const [search, setSearch] = useState("code");
 
     useEffect(() => {
         axios
           .get(
-            `https://api.themoviedb.org/3/search/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&query=${search}&language=fr-FR`
+            `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${search}&language=fr-FR`
           )
           .then((res) => setMoviesData(res.data.results));
       }, [search]);
