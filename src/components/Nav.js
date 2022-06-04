@@ -29,7 +29,9 @@ export default function Nav() {
             <button className='nav__burger' onClick={handleClickBurger}>
             <MenuIcon />
             </button>
-            <img src='./images/netflix-logo-v2.png' className='nav__logo' alt='logo de netflix'/>
+            <Link to="/">
+                <img src='./images/netflix-logo-v2.png' className='nav__logo' alt='logo de netflix'/>
+            </Link>
             <nav className='nav__links'>
                 <NavLink to="/" className={(nav) => (nav.isActive ? "nav--active nav__link" : "nav__link")}>
                     Accueil

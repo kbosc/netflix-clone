@@ -9,31 +9,43 @@ export default function UserPage() {
   let moviesId = useSelector(state => state.dataSearchTMDB.favorite)
   
   useEffect(() => {
-
     for(let i = 0; i < moviesId.length; i++) {
       axios
         .get(
           `https://api.themoviedb.org/3/movie/${moviesId[i]}?api_key=${API_KEY}&language=fr-FR&external_source=imdb_id`
         )
-        .then((res) => setListFavorites((listfavorites) => [...listfavorites, res.data]));
+        
+        // .then((res) => console.log(res));
+        // .then((res) => setListFavorites((listfavorites) => [...listfavorites, res.data.success === false ? null : res.data]));
+        // .then((res) => setListFavorites((listfavorites) => [...listfavorites, res.data.success === !false && res.data]));
+        // .then((res) => setListFavorites((listfavorites) => [...listfavorites, res.data]));
+        .then((res) =>  setListFavorites((listfavorites) => [...listfavorites, res.data]))
+        .catch((error) => console.log(error.toJSON()));
     }
-
   }, [moviesId]);
 
 
-  console.log(listfavorites)
+  // console.log(moviesId)
 
   return (
     <div className='user'>
-      <h2>Votre liste :</h2>
+      <h2>Ma liste :</h2>
       <div className='user__card'>
-                {listfavorites.length > 0 && listfavorites.map((favorite) => (
+                { 
+                listfavorites.length > 0 && listfavorites.map((favorite) => (
                     <CardSearch
                     key={favorite.id}
                     movie={favorite}
                     />
                   ))
                 }
+                {/* {listfavorites.length > 0 && listfavorites.map((favorite) => (
+                    <CardSearch
+                    key={favorite.id}
+                    movie={favorite}
+                    />
+                  ))
+                } */}
       </div>
     </div>
   )

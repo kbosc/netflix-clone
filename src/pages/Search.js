@@ -6,14 +6,15 @@ import { API_KEY } from "../config/Request"
 
 export default function Search() {
     const [moviesData, setMoviesData] = useState([]);
-    const [search, setSearch] = useState("super");
+    const [search, setSearch] = useState("dragon");
 
     useEffect(() => {
         axios
           .get(
             `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${search}&language=fr-FR`
           )
-          .then((res) => setMoviesData(res.data.results));
+          .then((res) => setMoviesData(res.data.results))
+          .catch((error) => console.log(error.toJSON()));
       }, [search]);
 
 
@@ -33,7 +34,6 @@ export default function Search() {
             </div>
             <div className='search__card'>
                 {moviesData.slice(0, 12).map((movie) => (
-
                     <CardSearch
                     key={movie.id}
                     movie={movie}

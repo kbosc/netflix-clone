@@ -16,7 +16,9 @@ export default function Banner() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(requests.fetchTrending)
+            const request = await axios
+            .get(requests.fetchTrending)
+            .catch((error) => console.log(error.toJSON()));
             setMovie(
                 request.data.results[
                     Math.floor(Math.random() * request.data.results.length - 1)

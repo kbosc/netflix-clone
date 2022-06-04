@@ -1,13 +1,11 @@
 import React from 'react'
-import { useDispatch } from "react-redux"
-import { addFavoriteSearch } from '../store'
-// import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { addFavoriteSearch, removeFavoriteSearch } from '../store'
 
 export default function CardSearch({movie}) {
+  let moviesId = useSelector(state => state.dataSearchTMDB.favorite)
   const dispatch = useDispatch()
   const baseUrl = "https://image.tmdb.org/t/p/original"
-
-  // console.log(useSelector(state => state.dataSearchTMDB))
 
   return (
     <div className='card'>
@@ -19,8 +17,13 @@ export default function CardSearch({movie}) {
         }
         alt={movie?.title || movie?.name || movie?.original_title}
         className="card__image"
-      />
-      <div className='card__add' onClick={() => dispatch(addFavoriteSearch(movie.id))}>Add</div>
+      /> 
+      {
+        moviesId.includes(movie.id) ?
+        <div className='card__modify' onClick={() => dispatch(removeFavoriteSearch(movie.id))}>Supprimer</div>
+        :
+        <div className='card__modify' onClick={() => dispatch(addFavoriteSearch(movie.id))}>Ajouter</div>
+      }
     </div>
   )
 }
