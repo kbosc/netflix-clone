@@ -1,4 +1,4 @@
-import React, { useState, useParams } from 'react'
+import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Link, NavLink } from 'react-router-dom';
@@ -8,8 +8,6 @@ import SearchIcon from '@mui/icons-material/Search';
 export default function Nav() {
     const [navBlack, setNavBlack] = useState(false)
     const [toggleMenuBurger, setToggleMenuBurger] = useState(false)
-
-    // console.log(window.location.pathname === "/user"); 
 
     const transitionNav = () => {
         window.scrollY > 100 ? setNavBlack(true) : setNavBlack(false)
@@ -36,26 +34,12 @@ export default function Nav() {
                 <NavLink to="/" className={(nav) => (nav.isActive ? "nav--active nav__link" : "nav__link")}>
                     Accueil
                 </NavLink>
-                {/* <a href='/' className='nav__link'>
-                    Séries
-                </a>
-                <a href='/' className='nav__link'>
-                    Films
-                </a> */}
                 <NavLink to="/user" className={(nav) => (nav.isActive ? "nav--active nav__link" : "nav__link")}>
                     Ma liste
                 </NavLink>
             </nav>
             <div className='nav__actions'>
                 <Link to="/search">
-                    {/* {window.location.pathname === "/search" ? 
-                        // <form className='nav__action--form'>
-                        //     <input type="text" placeholder='Titres, personnes, genres' id='search-input' className='nav__action--form__input'/> 
-                        // </form>
-                        ""
-                        :
-                        <SearchIcon /> 
-                    } */}
                     <SearchIcon /> 
                 </Link>
                 <a href='/' className='nav__action'>

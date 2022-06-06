@@ -7,13 +7,9 @@ const dataSearchTMDB = createSlice({
     },
     reducers: {
         addFavoriteSearch: (state, action) => {
-            // console.log(action);
             !state.favorite.includes(action.payload) && state.favorite.push(action.payload);
         },
         removeFavoriteSearch: (state, action) => {
-            // console.log(action);
-            // const newState = state.favorite.filter(elt => elt !== action.payload);
-            // return state.favorite = newState
             state.favorite.splice(state.favorite.indexOf(action.payload), 1)
         },
     },

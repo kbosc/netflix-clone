@@ -15,7 +15,6 @@ export default function Quickview({bannerStyle, movie, popup, popupStatut}) {
             </div>
             <button className='quickView__close' onClick={popup}>
                 <CancelIcon />
-                {/* <CancelIcon fontSize="large"/> */}
             </button>
         </div>
     </div>

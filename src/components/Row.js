@@ -20,8 +20,6 @@ export default function Row({ title, fetchUrl, isPoster }) {
     fetchData()
   }, [fetchUrl])
 
-//   console.log(movies)
-
   return (
     <div className="row">
       <h2 className="row__title">{title}</h2>
@@ -41,9 +39,6 @@ export default function Row({ title, fetchUrl, isPoster }) {
               :
               <div className='card__modify' onClick={() => dispatch(addFavoriteSearch(movie.id))}>Ajouter</div>
             }
-            {/* {!isPoster &&
-            <div className="">Coucou</div>
-            } */}
           </div>
         ))}
       </div>
