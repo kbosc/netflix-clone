@@ -1,5 +1,5 @@
 import React from 'react'
-import CancelIcon from '@mui/icons-material/Cancel';
+// import CancelIcon from '@mui/icons-material/Cancel';
 
 export default function Quickview({bannerStyle, movie, popup, popupStatut}) {
   return (
@@ -14,7 +14,8 @@ export default function Quickview({bannerStyle, movie, popup, popupStatut}) {
                 </p>
             </div>
             <button className='quickView__close' onClick={popup}>
-                <CancelIcon />
+                {/* <CancelIcon /> */}
+                X
             </button>
         </div>
     </div>

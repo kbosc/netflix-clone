@@ -22,7 +22,7 @@ export default function UserPage() {
 
   return (
     <div className='user'>
-      <h2>Ma liste :</h2>
+      {/* <h2>Ma liste :</h2> */}
       <div className='user__card'>
         { listfavorites.length > 0 && listfavorites.map((favorite) => (
             <CardSearch

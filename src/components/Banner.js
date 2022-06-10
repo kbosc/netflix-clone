@@ -38,8 +38,6 @@ export default function Banner() {
         backgroundPosition: "center center",
     }
 
-    // console.log(popup);
-
   return (
     <header className='banner' style={bannerStyle}>
         <div className='banner__content'>
