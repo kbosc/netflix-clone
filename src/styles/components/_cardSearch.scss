@@ -9,11 +9,22 @@
                 transform: scale(1.1);
             }
     }
-    &__modify {
+    &__button {
+        border-radius: 5px;
+        min-width: 50px;
+        max-width: 100px;
+        padding: 0.5em;
         position: absolute;
         bottom: 2%;
         right: 2%;
         cursor: pointer;
+        background: #37474f;
+        color: #fff;
+        transition: background-color 0.3s, color 0.3s;
+        &:hover {
+            background-color: #fff;
+            color: black;
+        }
         &:active {
             color: red;
         }

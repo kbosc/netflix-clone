@@ -22,14 +22,16 @@ export default function UserPage() {
 
   return (
     <div className='user'>
-      {/* <h2>Ma liste :</h2> */}
       <div className='user__card'>
-        { listfavorites.length > 0 && listfavorites.map((favorite) => (
+        { listfavorites.length > 0 ? 
+        listfavorites.map((favorite) => (
             <CardSearch
             key={favorite.id}
             movie={favorite}
             />
           ))
+          :
+          <p>Vous n'avez pas encore ajouté de film à votre liste</p>
         }
       </div>
     </div>

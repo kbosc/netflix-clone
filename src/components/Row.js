@@ -35,9 +35,9 @@ export default function Row({ title, fetchUrl, isPoster }) {
             </Link>
             {
               moviesId.includes(movie.id) ?
-              <div className='card__modify' onClick={() => dispatch(removeFavoriteSearch(movie.id))}>Supprimer</div>
+              <div className='card__button' onClick={() => dispatch(removeFavoriteSearch(movie.id))}>Supprimer</div>
               :
-              <div className='card__modify' onClick={() => dispatch(addFavoriteSearch(movie.id))}>Ajouter</div>
+              <div className='card__button' onClick={() => dispatch(addFavoriteSearch(movie.id))}>Ajouter</div>
             }
           </div>
         ))}

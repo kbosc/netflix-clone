@@ -9,6 +9,7 @@ export default function Search() {
     const [search, setSearch] = useState("dragon");
 
     useEffect(() => {
+        setMoviesData([])
         axios
           .get(
             `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${search}&language=fr-FR`
@@ -26,18 +27,18 @@ export default function Search() {
                 <form className='search__text--form'>
                     <input 
                     type="text" 
-                    placeholder='Titres, personnes, genres' 
+                    placeholder='Titres' 
                     id='search-input'
                     onChange={(e) => setSearch(e.target.value)}
                     className='search__text--form__input'/> 
                 </form>
             </div>
             <div className='search__card'>
-                {moviesData.slice(0, 12).map((movie) => (
-                    <CardSearch
-                    key={movie.id}
-                    movie={movie}
-                    />
+                {   moviesData.slice(0, 12).map((movie) => (
+                        <CardSearch
+                        key={movie.id}
+                        movie={movie}
+                        />
                     ))
                 }
             </div>
