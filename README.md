@@ -12,8 +12,8 @@ Reproduction de l'interface et de ses fonctionnalités
 
 - [x] Reproduction d'une application et de ses fonctionnalités
 - [x] Utilisation d'une base de données sur serveur distant
-- [x] Optimisation des performances de chargement et de rendu
-<!-- - [x] Sécurisation de la clé d'authentification à l'API -->
+- [x] Déveloper un fonctionnalité de recherche
+- [x] Utilisation d'un state local pour stocker les favoris
 
 ## Bibliothèque
 
