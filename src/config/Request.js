@@ -1,8 +1,8 @@
-// const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
-export const API_KEY = "4259016ee3cf9e68c51b29873884971d";
+
+export const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
+
 const BASE_URL = "https://api.themoviedb.org/3";
 
-// console.log(process.env.REACT_APP_TMDB_API_KEY)
 const requests = {
     fetchTrending: `${BASE_URL}/trending/movie/week?api_key=${API_KEY}&language=fr-FR`,
     fetchNetflixOriginals: `${BASE_URL}/trending/movie/day?api_key=${API_KEY}`,
