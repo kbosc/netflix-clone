@@ -1,7 +1,7 @@
 import React from 'react'
 // import CancelIcon from '@mui/icons-material/Cancel';
 
-export default function Quickview({bannerStyle, movie, popup, popupStatut}) {
+export default function QuickView({bannerStyle, movie, popup, popupStatut}) {
   return (
     <div className={`quickView ${popupStatut && "open"}`}>
         <div className='quickView__banner' style={bannerStyle}>

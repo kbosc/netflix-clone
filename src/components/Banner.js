@@ -3,7 +3,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import requests from "../config/Request"
 import axios from 'axios';
-import Quickview from './QuickView';
+import QuickView from './QuickView';
 import { Link } from "react-router-dom"
 
 export default function Banner() {
@@ -61,7 +61,7 @@ export default function Banner() {
                 </button>
             </div>
         </div>
-        <Quickview
+        <QuickView
             bannerStyle={bannerStyle}
             movie={movie}
             popup={handleClickPopup}
